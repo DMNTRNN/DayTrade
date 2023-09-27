@@ -176,7 +176,7 @@ def drawing(A):
     rez=np.zeros((12,W))
     HZ=np.zeros((W))
     for t in range(W):
-        HZ[t]=A[t,4]*(A[t,3]-A[t,0])/(2*(A[t,1]-A[t,2])-abs(A[t,3]-A[t,0])+0.00000000000000000000000000000000001)
+        HZ[t]=A[t,4]*(A[t,3]-A[t,0])/(2*(A[t,1]-A[t,2])-abs(A[t,3]-A[t,0])+0.000001)
     M=np.max(np.abs(HZ))
     for t in range(W):
         HZ[t]=np.sum(HZ[t:W-10])
